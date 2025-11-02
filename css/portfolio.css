@@ -1,0 +1,200 @@
+/* ========================================
+   Portfolio Styles
+   ======================================== */
+
+/* General Section Styling */
+.section {
+  padding: var(--spacing-12) 0;
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-8);
+  color: var(--color-gray-900);
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--spacing-16) 0 var(--spacing-12) 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-6);
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-gray-200);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.name {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-gray-900);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  margin-bottom: var(--spacing-1);
+  color: var(--color-gray-600);
+}
+
+.bio {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.contact-item {
+  display: flex;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  color: var(--color-gray-700);
+  transition: all 0.2s ease;
+}
+
+.contact-label {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-900);
+  min-width: 80px;
+}
+
+.contact-value {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  color: var(--color-gray-600);
+  transition: all 0.2s ease;
+}
+
+/* LinkedIn link styling */
+.contact-item[href^="https"] .contact-value {
+  color: var(--color-primary);
+}
+
+.contact-item[href^="https"]:hover .contact-value {
+  text-decoration: underline;
+}
+
+/* Timeline Sections */
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-6);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-gray-300);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-8);
+  padding-left: var(--spacing-4);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-gray-900);
+  border: 2px solid var(--color-white);
+}
+
+.timeline-date {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-1);
+}
+
+.timeline-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-1);
+}
+
+.timeline-role {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* Experience Section */
+.experience-section {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+/* Education Section */
+.education-section {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+/* Footer */
+.footer {
+  padding: var(--spacing-8) 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  margin: 0;
+}
+
+/* Remove default margins from hero section headings */
+.hero h1,
+.hero p {
+  margin-bottom: var(--spacing-2);
+}
+
+.hero p:last-child {
+  margin-bottom: 0;
+}
