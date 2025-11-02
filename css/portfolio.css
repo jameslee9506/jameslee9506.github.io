@@ -172,8 +172,18 @@
   border-bottom: 1px solid var(--color-gray-200);
 }
 
+/* Projects Section */
+.projects-section {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
 /* Education Section */
 .education-section {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+/* Certifications & Awards Section */
+.certifications-section {
   border-bottom: 1px solid var(--color-gray-200);
 }
 
