@@ -161,6 +161,15 @@
   margin-bottom: var(--spacing-1);
 }
 
+.timeline-company {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+  margin-top: -2px;
+  letter-spacing: 0.05em;
+}
+
 .timeline-role {
   font-size: var(--text-base);
   color: var(--color-gray-600);
