@@ -4,7 +4,7 @@
 
 /* General Section Styling */
 .section {
-  padding: var(--spacing-12) 0;
+  padding: var(--spacing-12) var(--spacing-4);
 }
 
 .section-title {
@@ -16,7 +16,7 @@
 
 /* Hero Section */
 .hero {
-  padding: var(--spacing-16) 0 var(--spacing-12) 0;
+  padding: var(--spacing-16) var(--spacing-4) var(--spacing-12) var(--spacing-4);
 }
 
 .hero-content {
@@ -68,11 +68,11 @@
 }
 
 .intro {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: var(--font-normal);
   color: var(--color-gray-500);
   line-height: 1.6;
-  margin-top: var(--spacing-4);
+  margin-top: var(--spacing-3);
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -140,6 +140,10 @@
   position: relative;
   margin-bottom: var(--spacing-8);
   padding-left: var(--spacing-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
 }
 
 .timeline-item:last-child {
@@ -158,11 +162,16 @@
   border: 2px solid var(--color-white);
 }
 
+.timeline-content {
+  flex: 1;
+}
+
 .timeline-date {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
   color: var(--color-gray-500);
-  margin-bottom: var(--spacing-1);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .timeline-title {
@@ -182,8 +191,8 @@
 }
 
 .timeline-role {
-  font-size: var(--text-base);
-  color: var(--color-gray-600);
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
   line-height: 1.6;
 }
 
@@ -195,6 +204,30 @@
 /* Projects Section */
 .projects-section {
   border-bottom: 1px solid var(--color-gray-200);
+}
+
+.timeline-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  padding: var(--spacing-2);
+  margin-left: calc(-1 * var(--spacing-2));
+  margin-right: calc(-1 * var(--spacing-2));
+}
+
+.timeline-item-link:hover {
+  background-color: var(--color-gray-50);
+  transform: translateX(4px);
+}
+
+.timeline-item-link .timeline-title {
+  color: var(--color-primary);
+}
+
+.timeline-item-link:hover .timeline-title {
+  text-decoration: underline;
 }
 
 /* Education Section */

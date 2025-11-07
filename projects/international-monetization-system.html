@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>International Monetization System - James Lee</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1 class="project-title">International Monetization System</h1>
+            <p class="project-meta">
+                <span class="project-company">GRAPHIC</span>
+                <span class="project-year">2025</span>
+            </p>
+            <div class="project-callout">
+                <p class="project-summary">International creator monetization platform, similar to Google AdSense, enabling cross-border payments and revenue distribution</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>The International Monetization System powers GRAPHIC's core business: a digital asset-based donation platform for creators. Fans can purchase virtual currency to support their favorite creators through donations. Creators can then convert these digital assets into real money, creating a sustainable revenue stream.</p>
+                <p>The system manages the entire monetization flow: tracking how digital assets are transferred from supporters to creators, applying real-time exchange rates for accurate cross-border settlements, and ensuring transparent financial auditing throughout the process. This enables creators worldwide to receive fair compensation regardless of geographic or currency boundaries.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>Cross-border donation support with country-specific currency units</li>
+                    <li>Virtual currency system with recharge mechanism</li>
+                    <li>Real-time exchange rate integration for settlement</li>
+                    <li>Asset management audit system for financial transparency</li>
+                    <li>Automated revenue distribution with Wise integration</li>
+                    <li>Multi-currency payment processing and tracking</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Accounting System</h2>
+                <p>The system implements a double-entry bookkeeping system to ensure financial accuracy and transparency. Every transaction follows a voucher-based recording process.</p>
+                <h3 class="subsection-title">Voucher System</h3>
+                <ul class="feature-list">
+                    <li>Deposit vouchers: Record incoming funds</li>
+                    <li>Withdrawal vouchers: Record outgoing funds</li>
+                </ul>
+
+                <p class="example-title">Example: Virtual Currency Transactions</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Deposit</td>
+                                <td>User purchases 1,000 credits</td>
+                                <td>Cash: $10</td>
+                                <td>User Balance: 1,000 credits</td>
+                            </tr>
+                            <tr>
+                                <td>Withdrawal</td>
+                                <td>User donates 500 credits to creator</td>
+                                <td>Creator Balance: 500 credits</td>
+                                <td>User Balance: 500 credits</td>
+                            </tr>
+                            <tr>
+                                <td>Settlement</td>
+                                <td>Creator cashes out 500 credits</td>
+                                <td>Creator Balance: 500 credits</td>
+                                <td>Cash: $5 (with exchange rate)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subsection-title">Double-Entry Bookkeeping</h3>
+                <p>Each voucher is recorded in the ledger using double-entry bookkeeping method, with corresponding debit and credit entries to maintain financial balance and integrity.</p>
+
+                <p class="example-title">Example: Double-Entry Ledger</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Account</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">User purchases 1,000 credits</td>
+                                <td>Cash Account</td>
+                                <td>1,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>User Balance</td>
+                                <td></td>
+                                <td>1,000</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">User donates 500 credits</td>
+                                <td>User Balance</td>
+                                <td>500</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Creator Balance</td>
+                                <td></td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Creator cashes out 500 credits</td>
+                                <td>Creator Balance</td>
+                                <td>500</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Cash Account</td>
+                                <td></td>
+                                <td>500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>This double-entry system enables comprehensive auditing capabilities:</p>
+                <ul class="feature-list">
+                    <li>Balance verification: Sum of debits and credits must always equal zero</li>
+                    <li>Transaction traceability: Complete audit trail for every financial movement</li>
+                    <li>Data integrity: Hash-based validation prevents tampering with historical records</li>
+                    <li>Error detection: Automatic identification of accounting discrepancies</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Payment System</h2>
+                <p>The platform supports multiple payment methods: Payment Gateway (PG) for web-based transactions and In-App Purchase (IAP) for mobile apps. When a user initiates a purchase, the system creates and tracks a payment transaction by method, processes it through the external provider, generates a deposit voucher upon success, and fulfills the product delivery via double-entry bookkeeping.</p>
+
+                <div class="flow-diagram-horizontal">
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">1</div>
+                        <div class="flow-step-label">Payment</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">2</div>
+                        <div class="flow-step-label">Processing</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">3</div>
+                        <div class="flow-step-label">Product Delivery</div>
+                    </div>
+                </div>
+
+                <div class="alert-callout">
+                    <strong>Exchange Rate Management:</strong> Since the system is based on a Korean bank account, international payments are converted and deposited using market exchange rates. This necessitates real-time exchange rate tracking and management to ensure accurate credit allocation across different currencies.
+                </div>
+
+                <p>The system is designed around a product-based architecture to handle not only credit purchases but also other in-app services such as ad removal. This flexible design allows the payment system to support various types of digital products, with each product type triggering appropriate fulfillment actions (credit addition, service activation, etc.).</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Donation System</h2>
+                <p>The donation system enables users to support creators by transferring credits from their balance to the creator's balance. Each donation generates a voucher that records the transaction in the double-entry bookkeeping system, ensuring complete traceability and accurate balance management for both parties.</p>
+
+                <div class="flow-diagram-horizontal">
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">1</div>
+                        <div class="flow-step-label">Donation Request</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">2</div>
+                        <div class="flow-step-label">Voucher Creation</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">3</div>
+                        <div class="flow-step-label">Credit Transfer</div>
+                    </div>
+                </div>
+
+                <p class="example-title">Example: Donation Transaction</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>User Balance</td>
+                                <td>500</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Creator Balance</td>
+                                <td></td>
+                                <td>500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The ledger entry shows how 500 credits are debited from the user's balance and credited to the creator's balance, maintaining the fundamental accounting principle where total debits equal total credits.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Settlement System</h2>
+                <p>Creators can request withdrawal of their unsettled earnings accumulated from donations. The system allows creators to submit a single withdrawal request for all pending settlements, which are then processed and paid out on the 10th of the following month.</p>
+
+                <div class="flow-diagram-horizontal">
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">1</div>
+                        <div class="flow-step-label">Withdrawal Request</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">2</div>
+                        <div class="flow-step-label">Settlement Processing</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">3</div>
+                        <div class="flow-step-label">Payout (Next Month 10th)</div>
+                    </div>
+                </div>
+
+                <p class="example-title">Example: Settlement Transaction</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Creator Balance</td>
+                                <td>1,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Cash Account</td>
+                                <td></td>
+                                <td>1,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>When a creator requests withdrawal, the system debits their credit balance and credits the cash account, converting digital credits into real money through bank transfer or payment service integration (such as Wise for international creators).</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Exchange Rate System</h2>
+                <p>When creators settle earnings in different currencies, the system applies the market exchange rate from the time of the original purchase. Exchange rates are collected and stored every 15 minutes, and each credit transaction in the ledger includes an exchange rate snapshot to ensure accurate settlement calculations regardless of when the withdrawal occurs.</p>
+
+                <h3 class="subsection-title">How It Works</h3>
+                <ul class="feature-list">
+                    <li>Exchange rates are automatically fetched and stored every 15 minutes</li>
+                    <li>Each credit entry in the ledger records the exchange rate at purchase time</li>
+                    <li>During settlement, the system retrieves the original exchange rate snapshot</li>
+                    <li>Credits are converted to the destination currency using the recorded rate</li>
+                </ul>
+
+                <p class="example-title">Example: Cross-Currency Settlement</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Credits</th>
+                                <th>Price per Credit</th>
+                                <th>Exchange Rate (USD/KRW)</th>
+                                <th>Settlement Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>User purchases 1,000 credits</td>
+                                <td>1,000</td>
+                                <td>300 KRW</td>
+                                <td>1,430</td>
+                                <td>300,000 KRW ($209.79 USD)</td>
+                            </tr>
+                            <tr>
+                                <td>Creator receives donation</td>
+                                <td>1,000</td>
+                                <td>300 KRW</td>
+                                <td>1,430 (inherited)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Creator withdraws to USD</td>
+                                <td>1,000</td>
+                                <td>300 KRW</td>
+                                <td>1,430 (applied)</td>
+                                <td>$209.79 USD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>This approach ensures that creators receive fair compensation based on the actual value at the time of purchase, preventing losses or gains from exchange rate fluctuations between purchase and settlement.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>International Payout System</h2>
+                <p>For cross-border payments from Korea to countries like Japan and the United States, the system integrates with Wise to facilitate international transfers. The payout process automatically calculates country-specific taxes and transaction fees, deducting them from the settlement amount before transfer. Upon successful completion, the system generates and sends a receipt documenting the transaction details.</p>
+
+                <div class="flow-diagram-horizontal">
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">1</div>
+                        <div class="flow-step-label">Calculate Taxes & Fees</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">2</div>
+                        <div class="flow-step-label">Process via Wise</div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step-h">
+                        <div class="flow-step-number-h">3</div>
+                        <div class="flow-step-label">Send Receipt</div>
+                    </div>
+                </div>
+
+                <p class="example-title">Example: International Payout Breakdown</p>
+                <div class="table-container">
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Settlement Amount</td>
+                                <td>$209.79 USD</td>
+                            </tr>
+                            <tr>
+                                <td>Country Tax (e.g., 3%)</td>
+                                <td>-$6.29 USD</td>
+                            </tr>
+                            <tr>
+                                <td>Transaction Fee</td>
+                                <td>-$2.50 USD</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Final Payout</strong></td>
+                                <td><strong>$201.00 USD</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The receipt includes a complete breakdown of the original settlement amount, applicable taxes, transaction fees, and the final amount transferred to the creator's account. This ensures full transparency in the payout process.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Audit System</h2>
+                <p>The audit system continuously monitors the monetization platform to ensure integrity, accuracy, and prevent fraud. It performs automated verification across all financial transactions and generates regular reports for compliance and anomaly detection.</p>
+
+                <h3 class="subsection-title">Ledger Integrity Verification</h3>
+                <ul class="feature-list">
+                    <li>Hash chain validation to detect voucher tampering</li>
+                    <li>Debit/credit balance verification (sum must equal zero)</li>
+                    <li>Sequential voucher order consistency checks</li>
+                </ul>
+
+                <h3 class="subsection-title">Balance Reconciliation</h3>
+                <ul class="feature-list">
+                    <li>Total user and creator credit balance verification</li>
+                    <li>Comparison between actual deposits and system-issued credits</li>
+                    <li>Comparison between withdrawals and credit redemptions</li>
+                </ul>
+
+                <h3 class="subsection-title">Exchange Rate Validation</h3>
+                <ul class="feature-list">
+                    <li>Verification that recorded rates fall within actual market rate ranges</li>
+                    <li>Detection of missing exchange rate data</li>
+                </ul>
+
+                <h3 class="subsection-title">Transaction Traceability</h3>
+                <ul class="feature-list">
+                    <li>End-to-end tracking from payment to settlement</li>
+                    <li>Identification of unsettled items</li>
+                    <li>Monitoring of delayed settlement cases</li>
+                </ul>
+
+                <h3 class="subsection-title">Tax & Fee Calculation Verification</h3>
+                <ul class="feature-list">
+                    <li>Accuracy verification of country-specific tax rates</li>
+                    <li>Detection of fee calculation errors</li>
+                </ul>
+
+                <h3 class="subsection-title">Automated Audit Reports</h3>
+                <ul class="feature-list">
+                    <li>Daily and monthly financial status summaries</li>
+                    <li>Anomalous transaction detection and alerts</li>
+                    <li>Automatic reporting of discrepancies</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Future Enhancements</h2>
+                <p>The International Monetization System continues to evolve with planned improvements to expand capabilities and better serve the global creator community.</p>
+
+                <h3 class="subsection-title">Payment Methods Expansion</h3>
+                <ul class="feature-list">
+                    <li>Additional payment gateway integrations for regional coverage</li>
+                    <li>Cryptocurrency payment support</li>
+                    <li>Direct bank transfer options</li>
+                </ul>
+
+                <h3 class="subsection-title">Geographic Expansion</h3>
+                <ul class="feature-list">
+                    <li>Support for additional countries and currencies</li>
+                    <li>Localized payment methods for emerging markets</li>
+                    <li>Multi-region settlement infrastructure</li>
+                </ul>
+
+                <h3 class="subsection-title">AI-Powered Fraud Detection</h3>
+                <ul class="feature-list">
+                    <li>Machine learning models for anomalous transaction detection</li>
+                    <li>Predictive analytics for fraud prevention</li>
+                    <li>Real-time risk scoring system</li>
+                </ul>
+
+                <h3 class="subsection-title">Advanced Analytics</h3>
+                <ul class="feature-list">
+                    <li>Creator revenue analytics dashboard</li>
+                    <li>Earnings forecasting and insights</li>
+                    <li>Tax reporting automation for multiple jurisdictions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 James Lee. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+    <script>
+        document.body.style.setProperty('--random-delay', Math.random() * 8);
+    </script>
+</body>
+</html>

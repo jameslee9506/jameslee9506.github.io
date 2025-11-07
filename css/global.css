@@ -75,11 +75,29 @@ html {
   font-size: 87.5%; /* 16px * 87.5% = 14px */
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--text-base);
   color: var(--color-gray-900);
-  background-color: var(--color-white);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradient-shift 8s ease infinite;
+  animation-delay: calc(var(--random-delay, 0) * -1s);
+  min-height: 100vh;
+  padding: var(--spacing-8);
 }
 
 /* ========================================
@@ -87,7 +105,7 @@ body {
    ======================================== */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif-heading);
+  font-family: var(--font-sans);
   font-weight: var(--font-bold);
   line-height: 1.2;
   margin-bottom: var(--spacing-4);
@@ -202,8 +220,22 @@ li {
    Layout
    ======================================== */
 
+.content-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
 .container {
-  max-width: 800px;
   margin: 0 auto;
   padding: 0 var(--spacing-4);
 }
