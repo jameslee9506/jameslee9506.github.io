@@ -15,12 +15,6 @@
   padding: 0;
 }
 
-/* Allow percentage-based heights in the application */
-html,
-body {
-  height: 100%;
-}
-
 /* Typographic tweaks! */
 body {
   line-height: 1.5;
