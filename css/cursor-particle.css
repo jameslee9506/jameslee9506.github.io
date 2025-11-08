@@ -1,0 +1,52 @@
+/* Cursor Particle Effect */
+.cursor-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde68a, #fcd34d);
+  box-shadow:
+    0 0 8px rgba(253, 230, 138, 0.4),
+    0 0 15px rgba(252, 211, 77, 0.3);
+  animation: sparkle 0.8s ease-out forwards;
+  opacity: 0.6;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Alternative particle colors */
+.cursor-particle.blue {
+  background: radial-gradient(circle, #bfdbfe, #93c5fd);
+  box-shadow:
+    0 0 8px rgba(191, 219, 254, 0.4),
+    0 0 15px rgba(147, 197, 253, 0.3);
+}
+
+.cursor-particle.purple {
+  background: radial-gradient(circle, #e9d5ff, #d8b4fe);
+  box-shadow:
+    0 0 8px rgba(233, 213, 255, 0.4),
+    0 0 15px rgba(216, 180, 254, 0.3);
+}
+
+.cursor-particle.pink {
+  background: radial-gradient(circle, #fbcfe8, #f9a8d4);
+  box-shadow:
+    0 0 8px rgba(251, 207, 232, 0.4),
+    0 0 15px rgba(249, 168, 212, 0.3);
+}

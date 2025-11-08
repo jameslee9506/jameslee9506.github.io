@@ -1,0 +1,54 @@
+/* Snow Effect */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  user-select: none;
+  cursor: default;
+  animation-name: snowfall;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color: #bfdbfe;
+  font-size: 1em;
+  opacity: 0.4;
+  text-shadow: 0 0 1px rgba(191, 219, 254, 0.5);
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(var(--x-end), 100vh, 0);
+    opacity: 0;
+  }
+}
+
+/* Different animation speeds and delays for variety */
+.snowflake:nth-child(2n) {
+  animation-duration: 12s;
+}
+
+.snowflake:nth-child(3n) {
+  animation-duration: 8s;
+}
+
+.snowflake:nth-child(4n) {
+  animation-duration: 14s;
+}
+
+.snowflake:nth-child(5n) {
+  font-size: 0.7em;
+}
+
+.snowflake:nth-child(7n) {
+  font-size: 1.3em;
+}
