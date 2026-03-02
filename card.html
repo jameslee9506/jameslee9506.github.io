@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Sangwon Lee - Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 86mm;
+            height: 52mm;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1px;
+            overflow: hidden;
+            background: #fff;
+            padding: 18px 22px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0 16px;
+            align-items: end;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .company {
+            position: absolute;
+            top: 18px;
+            left: 22px;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #111;
+            display: flex;
+            gap: 8px;
+        }
+
+        .address {
+            font-weight: 400;
+            color: #111;
+        }
+
+        .name {
+            font-size: 17px;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .name-kr {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #111;
+            letter-spacing: 3px;
+        }
+
+        .role {
+            margin-top: 2px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .role-kr {
+            margin-top: 2px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-line {
+            margin-top: 5px;
+            font-size: 10px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .right {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .right img,
+        .right canvas {
+            width: 70px;
+            height: 70px;
+        }
+
+        .hint {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-pdf {
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .btn-pdf button {
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-pdf button:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media print { .hint, .btn-pdf { display: none; } }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="card-container">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <!-- English -->
+            <div class="card-face card-front">
+                <div class="left">
+                    <div class="company">GRAPHIC RESEARCH INC. <span class="address">Dongdaemun-gu, Seoul, Korea</span></div>
+                    <div class="name">James Lee</div>
+                    <div class="role">CEO</div>
+                    <div class="contact-line">010-9081-0997<br>james@graphic-research.com</div>
+                </div>
+                <div class="right">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://jameslee9506.github.io&color=000000&bgcolor=ffffff&qzone=1&format=svg" alt="QR">
+                </div>
+            </div>
+            <!-- Korean -->
+            <div class="card-face card-back">
+                <div class="left">
+                    <div class="company">주식회사 그래픽리서치 <span class="address">서울특별시 동대문구 고산자로 505, 2층</span></div>
+                    <div class="name-kr">이상원</div>
+                    <div class="role-kr">대표이사</div>
+                    <div class="contact-line">010-9081-0997<br>james@graphic-research.com</div>
+                </div>
+                <div class="right">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://jameslee9506.github.io&color=000000&bgcolor=ffffff&qzone=1&format=svg" alt="QR">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hint">click to flip</div>
+    <div class="btn-pdf"><button onclick="exportPDF()">PDF</button></div>
+</div>
+
+<script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+<script>
+    document.querySelectorAll('.right').forEach(el => {
+        const img = el.querySelector('img');
+        if (img) img.remove();
+
+        const qr = new QRCodeStyling({
+            width: 100,
+            height: 100,
+            data: "https://jameslee9506.github.io",
+            dotsOptions: { color: "#000", type: "classy" },
+            cornersSquareOptions: { type: "square" },
+            cornersDotOptions: { type: "square" },
+            backgroundOptions: { color: "#ffffff" },
+            margin: 0,
+            qrOptions: { errorCorrectionLevel: "M" }
+        });
+        qr.append(el);
+
+        // wrapper div 제거, canvas만 남기기
+        const wrapper = el.querySelector('div');
+        if (wrapper) {
+            const canvas = wrapper.querySelector('canvas');
+            if (canvas) {
+                el.appendChild(canvas);
+                wrapper.remove();
+            }
+        }
+    });
+
+    async function exportPDF() {
+        const card = document.querySelector('.card');
+        const front = card.querySelector('.card-front');
+        const back = card.querySelector('.card-back');
+
+        // 앞면/뒷면 모두 보이게 임시 설정
+        const origCard = card.style.cssText;
+        const origFront = front.style.cssText;
+        const origBack = back.style.cssText;
+
+        card.style.transform = 'none';
+        card.style.transformStyle = 'flat';
+        front.style.position = 'relative';
+        front.style.backfaceVisibility = 'visible';
+        back.style.position = 'relative';
+        back.style.backfaceVisibility = 'visible';
+        back.style.transform = 'none';
+
+        const scale = 4;
+        const opts = { scale, useCORS: true, backgroundColor: '#ffffff' };
+
+        // 뒷면 숨기고 앞면 캡처
+        back.style.display = 'none';
+        const frontCanvas = await html2canvas(card, opts);
+        back.style.display = '';
+
+        // 앞면 숨기고 뒷면 캡처
+        front.style.display = 'none';
+        const backCanvas = await html2canvas(card, opts);
+        front.style.display = '';
+
+        // 원래 상태 복원
+        card.style.cssText = origCard;
+        front.style.cssText = origFront;
+        back.style.cssText = origBack;
+
+        // PDF 생성 (명함 크기 86x52mm)
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [86, 52] });
+
+        pdf.addImage(frontCanvas.toDataURL('image/png'), 'PNG', 0, 0, 86, 52);
+        pdf.addPage([86, 52], 'landscape');
+        pdf.addImage(backCanvas.toDataURL('image/png'), 'PNG', 0, 0, 86, 52);
+
+        pdf.save('card.pdf');
+    }
+</script>
+</body>
+</html>
