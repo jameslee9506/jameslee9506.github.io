@@ -1,28 +1,277 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Resume - James Lee</title>
+    <title>Sangwon Lee - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+
+        body {
+            background: #111;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            color: #111;
+            -webkit-font-smoothing: antialiased;
         }
-        embed {
-            width: 100%;
-            height: 100%;
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: #fff;
+            margin: 40px auto;
+            padding: 56px 60px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 44px;
+        }
+
+        .name {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: #111;
+            color: #fff;
+            padding: 6px 14px;
+        }
+
+        .contact {
+            margin-top: 20px;
+            display: flex;
+            gap: 24px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .contact a {
+            color: #555;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1px;
+        }
+
+        .contact a:hover {
+            color: #111;
+            border-color: #111;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #111;
+        }
+
+        .about {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Entry */
+        .entry {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0 24px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .entry:last-child {
+            border-bottom: none;
+        }
+
+        .entry-org {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .entry-period {
+            font-size: 13px;
+            font-weight: 700;
+            color: #999;
+            text-align: right;
+            align-self: start;
+        }
+
+        .entry-role {
+            grid-column: 1 / -1;
+            font-size: 13px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .entry-note {
+            grid-column: 1 / -1;
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Skills */
+        .skills {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills li {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #111;
+            border: 2px solid #111;
+            padding: 6px 14px;
+        }
+
+        /* Print button */
+        .print-btn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: #222;
+            color: #eee;
+            border: 2px solid #444;
+            font-family: 'Pretendard', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .print-btn:hover {
+            background: #444;
+            border-color: #666;
+        }
+
+        @media print {
+            body { background: #fff; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 40px 48px;
+            }
+            .print-btn { display: none; }
         }
     </style>
 </head>
+<script>
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        location.replace('mobile.html');
+    }
+</script>
 <body>
-    <embed src="resume.pdf" type="application/pdf">
+
+<div class="page">
+    <div class="header">
+        <div class="name">Sangwon<br>Lee</div>
+        <div class="tagline">Engineer & Entrepreneur</div>
+        <div class="contact">
+            <a href="mailto:jameslee9506@gmail.com"><i class="fa-solid fa-envelope"></i> jameslee9506@gmail.com</a>
+            <a href="https://github.com/jameslee9506"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/james-l-e-e/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">About</div>
+        <p class="about">Finding and exploring the intersection of software and business.<br>Currently focused on AI-driven development and building products with autonomous agents.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="entry">
+            <span class="entry-org">GRAPHIC Research Inc.</span>
+            <span class="entry-period">2026 &mdash;</span>
+            <span class="entry-role">Founder, CEO</span>
+        </div>
+
+        <div class="entry">
+            <span class="entry-org">GRAPHIC Ltd. Co.</span>
+            <span class="entry-period">2023 &mdash;</span>
+            <span class="entry-role">Co-founder, CTO</span>
+        </div>
+
+        <div class="entry">
+            <span class="entry-org">Kakao Brain</span>
+            <span class="entry-period">2023</span>
+            <span class="entry-role">Pathfinder2, Intern</span>
+        </div>
+
+        <div class="entry">
+            <span class="entry-org">Blueant</span>
+            <span class="entry-period">2021 &mdash; 2023</span>
+            <span class="entry-role">Full-stack Developer, Founding Member</span>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="entry">
+            <span class="entry-org">Korea University</span>
+            <span class="entry-period">2025 &mdash;</span>
+            <span class="entry-role">M.S. in AI / Big Data</span>
+        </div>
+
+        <div class="entry">
+            <span class="entry-org">Kwangwoon University</span>
+            <span class="entry-period">2017 &mdash; 2023</span>
+            <span class="entry-role">B.S. in Software</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <ul class="skills">
+            <li>Software Architecture</li>
+            <li>End-to-end Dev</li>
+            <li>AI Driven Development</li>
+            <li>Communication</li>
+        </ul>
+    </div>
+</div>
+
+<button class="print-btn" onclick="window.print()">Save as PDF</button>
+
 </body>
 </html>
