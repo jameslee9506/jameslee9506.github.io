@@ -24,6 +24,17 @@
         /* Header */
         .header {
             margin-bottom: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .header-photo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 0;
+            flex-shrink: 0;
         }
 
         .name {
@@ -57,7 +68,7 @@
 
         .contact a {
             color: #333;
-            text-decoration: none;
+            text-decoration: underline;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -122,33 +133,26 @@
 
         /* Skills */
         .skills {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skills li {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #111;
-            border: 2px solid #111;
-            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <div class="name">Sangwon<br>Lee</div>
-    <div class="tagline">Engineer & Entrepreneur</div>
-    <div class="contact">
-        <a href="mailto:jameslee9506@gmail.com"><i class="fa-solid fa-envelope"></i> jameslee9506@gmail.com</a>
-        <a href="https://github.com/jameslee9506"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/james-l-e-e/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <div class="header-left">
+        <div class="name">Sangwon<br>Lee</div>
+        <div class="tagline">Engineer & Entrepreneur</div>
+        <div class="contact">
+            <a href="mailto:jameslee9506@gmail.com"><i class="fa-solid fa-envelope"></i> jameslee9506@gmail.com</a>
+            <a href="https://github.com/jameslee9506"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/james-l-e-e/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
     </div>
+    <img src="assets/profile.jpeg" alt="Profile" class="header-photo">
 </div>
 
 <div class="section">
@@ -160,13 +164,13 @@
     <div class="section-title">Experience</div>
 
     <div class="entry">
-        <div class="entry-org">GRAPHIC Research Inc.</div>
+        <div class="entry-org">GRAPHIC Research</div>
         <div class="entry-period">2026 &mdash;</div>
         <div class="entry-role">Founder, CEO</div>
     </div>
 
     <div class="entry">
-        <div class="entry-org">GRAPHIC Ltd. Co.</div>
+        <div class="entry-org">GRAPHIC</div>
         <div class="entry-period">2023 &mdash;</div>
         <div class="entry-role">Co-founder, CTO</div>
     </div>
@@ -174,7 +178,7 @@
     <div class="entry">
         <div class="entry-org">Kakao Brain</div>
         <div class="entry-period">2023</div>
-        <div class="entry-role">Pathfinder2, Intern</div>
+        <div class="entry-role">Pathfinder2</div>
     </div>
 
     <div class="entry">
@@ -196,18 +200,13 @@
     <div class="entry">
         <div class="entry-org">Kwangwoon University</div>
         <div class="entry-period">2017 &mdash; 2023</div>
-        <div class="entry-role">B.S. in Software</div>
+        <div class="entry-role">B.S. in Software · GPA 4.0</div>
     </div>
 </div>
 
 <div class="section">
     <div class="section-title">Skills</div>
-    <ul class="skills">
-        <li>Software Architecture</li>
-        <li>End-to-end Dev</li>
-        <li>AI Driven Development</li>
-        <li>Communication</li>
-    </ul>
+    <p class="skills">Software Engineering · End-to-end Dev · AI Driven Development · Stakeholder Communication</p>
 </div>
 
 </body>
